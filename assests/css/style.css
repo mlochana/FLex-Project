@@ -1,0 +1,151 @@
+*{ padding: 0%; margin: 0%; }
+/* FLEX-LAYOUT */
+.container{
+    display: flex;
+    flex-flow: row wrap;
+    gap: 20px;
+}
+:root{
+    --bg-color : #0c3c60;
+    --font-color : #fff;
+    --footer-bg-color : #7c6969;
+}
+/* HEADER CODE */
+header{
+    background-color: var(--bg-color);
+    justify-content: space-between;
+    align-items: center;
+    color: var(--font-color);
+    padding: 0px 70px;
+}
+header>nav>ul{
+    list-style: none;
+}
+header>nav>ul>li{
+    display: inline-block;
+    padding: 20px;
+}
+header>nav>ul>li:hover{
+    background-color: #fff;
+}
+header>nav>ul>li>a{
+    text-decoration: none;
+    color: var(--font-color);
+}
+header>nav>ul>li:hover a{
+    background-color: #fff;
+    color: black;
+}
+
+/* BANNER CODE */
+.banner{
+    background: url(../images/koenigsegg-gemera.jpg) no-repeat center;
+    background-size: 100%;
+    height: 670px;
+    justify-content: center;
+    align-items: end;
+}
+.banner>div{
+    background-color: var(--font-color);
+    display: inline-block;
+    padding: 30px;
+    text-align: center;
+    line-height: 2;
+}
+.banner>div>p{ font-size: 25px; }
+.banner>div>h1{ font-size: 50px; }
+.btn{
+    padding: 15px 30px;
+    background-color: transparent;
+    border: 1px solid var(--bg-color);
+    transition: 1s;
+    margin: 30px;
+    cursor: pointer;
+}
+.btn:hover{
+    background-color: var(--bg-color);
+    color: var(--font-color);
+}
+/* CARD */
+.title{
+    font-size: 30px;
+    margin: 30px;
+    text-align: center;
+}
+.card, .aboutUs, .ourClients, .contact, footer{ padding: 75px; }
+.item{
+    flex: 1;
+    padding: 20px;
+    line-height: 2;
+    text-align: center;
+    transition: 0.5s ease-in-out;
+}
+.card>.item:hover{
+    box-shadow: #131212 0px 3px 8px;
+}
+/* ABOUT US */
+.aboutUs{
+    background-image: url(../images/site.jpg);
+    background: linear-gradient(rgba(255,255,255,0.4), rgba(255,255,255,0.4), url(../images/site.jpg) no-repeat center);
+    background-size: 100%;
+    background-attachment: fixed;
+    text-align: center;
+}
+/* OUR CLIENTS */
+.ourClients{
+    text-align: center;
+}
+.ourClients [class*="fa-"]{
+    color: #544e4e;
+    transition: 1s;
+}
+.ourClients [class*="fa-"]:hover{
+    color: var(--bg-color);
+    transform: scale(1.1);
+}
+/* CONTACT */
+.contact{
+    background-color: var(--bg-color);
+    color: var(--font-color);
+}
+.contact input, .contact textarea{
+    width: 100%;
+    background-color: transparent;
+    border: 1px;
+    border-style: solid;
+    border-color: transparent transparent #fff transparent;
+    margin-bottom: 20px;
+    padding: 10px;
+    color: inherit;
+    outline: none;
+    transition: 1s ease-in-out;
+}
+.contact input:focus, .contact textarea:focus{
+    background-color: #fff;
+    color: #0c3c60;
+}
+.contact>form>div>div>button{
+    padding: 15px 20px;
+    width: 100%;
+    color: var(--bg-color);
+    font-weight: bold;
+    border: 1px solid var(--bg-color);
+    transition: 1s;
+    cursor: pointer;
+}
+.contact>form>div>div>button:hover{
+    background-color: transparent;
+    color: #fff;
+    border: 1px solid #fff;
+
+}
+.contact>form>div{
+    text-align: left;
+}
+/* FOOTER */
+footer{
+    background-color: var(--footer-bg-color);
+    color: var(--font-color);
+    text-align: center;
+    font-size: large;
+}
